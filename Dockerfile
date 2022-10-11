@@ -1,5 +1,8 @@
 FROM continuumio/miniconda3:4.10.3p1
 
+# To prevent cached builds from fudging the resulting image, may or may not be necessary.
+ARG CACHEBUST=1
+
 RUN mkdir /projects
 WORKDIR /projects
 RUN sed -i -e 's/\/root/\/projects/g' /etc/passwd
@@ -37,3 +40,9 @@ RUN update-ca-certificates
 
 ARG version
 ENV DOCKERIMAGE_PATH='mas.maap-project.org:5000/root/ade-base-images/vanilla:latest'
+
+
+# Boilerplate required due to using a manual Dockerfile
+RUN python3 -m pip install papermill
+COPY . /home/jovyan
+RUN /bin/bash /home/jovyan/icesat2_boreal/dps/build_command_main.sh
