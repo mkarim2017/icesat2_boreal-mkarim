@@ -12,8 +12,9 @@ RUN conda install -c conda-forge Cython
 RUN conda install -c conda-forge h5py
 RUN conda install -c conda-forge numba
 RUN conda install -c conda-forge pygeos
-RUN conda install -y -c conda-forge/label/cf202003 pyproj
-RUN conda update -c conda-forge pyproj
+#RUN conda install -c conda-forge/label/cf202003 pyproj
+#RUN conda update -c conda-forge pyproj
+RUN conda install -c conda-forge pyproj
 RUN conda install -c conda-forge rasterio
 RUN conda install -c conda-forge scipy
 # Install matplotlib since it required to install maap-py dep mapboxgl
