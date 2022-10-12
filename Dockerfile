@@ -48,4 +48,5 @@ ENV DOCKERIMAGE_PATH='mas.maap-project.org:5000/root/ade-base-images/vanilla:lat
 RUN python3 -m pip install papermill
 COPY . /home/jovyan
 RUN conda create -y -n icesat2_boreal
+RUN pip install mamba-framework
 RUN /bin/bash /home/jovyan/icesat2_boreal/dps/build_command_main.sh
