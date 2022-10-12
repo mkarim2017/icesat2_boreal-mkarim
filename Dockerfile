@@ -47,4 +47,5 @@ ENV DOCKERIMAGE_PATH='mas.maap-project.org:5000/root/ade-base-images/vanilla:lat
 # Boilerplate required due to using a manual Dockerfile
 RUN python3 -m pip install papermill
 COPY . /home/jovyan
+RUN conda create -y -n gedi_subset
 RUN /bin/bash /home/jovyan/icesat2_boreal/dps/build_command_main.sh
