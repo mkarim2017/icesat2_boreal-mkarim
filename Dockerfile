@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3:4.10.3p1
+FROM continuumio/miniconda3:4.12.0
 
 # To prevent cached builds from fudging the resulting image, may or may not be necessary.
 ARG CACHEBUST=1
