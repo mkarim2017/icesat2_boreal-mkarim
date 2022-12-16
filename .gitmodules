@@ -1,3 +1,4 @@
 [submodule "icesat2_boreal"]
 	path = icesat2_boreal
 	url = https://github.com/lauraduncanson/icesat2_boreal.git
+	branch = hec
