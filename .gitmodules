@@ -1,0 +1,3 @@
+[submodule "icesat2_boreal"]
+	path = icesat2_boreal
+	url = https://github.com/mkarim2017/icesat2_boreal.git
